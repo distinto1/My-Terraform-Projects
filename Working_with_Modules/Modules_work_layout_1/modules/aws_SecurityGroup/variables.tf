@@ -1,6 +1,6 @@
 
 variable "vpc_id" {
-    type = string
+  type = string
 }
 
 variable "sg_nametag" {
@@ -8,5 +8,10 @@ variable "sg_nametag" {
   default = {
     "Name" = "allow_tls"
   }
-  
+}
+
+
+variable "vpc_cidr_block" {
+  description = "The CIDR block of the VPC"
+  type        = string
 }

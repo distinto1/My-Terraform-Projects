@@ -1,11 +1,11 @@
 variable "subnet_id" {
-  
-  type = string 
+
+  type = string
 }
 
 variable "private_ips" {
-  type = list(string)
-  default = ["172.16.10.100"] 
+  type    = list(string)
+  default = ["172.16.10.100"]
 }
 
 variable "network_interface_nametag" {
@@ -13,5 +13,5 @@ variable "network_interface_nametag" {
   default = {
     "Name" = "primary_network_interface"
   }
-  
+
 }

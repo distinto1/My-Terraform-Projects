@@ -1,5 +1,5 @@
 variable "subnet_cidr" {
-  type = string
+  type    = string
   default = "172.16.0.0/24"
 }
 
@@ -12,5 +12,5 @@ variable "subnet_nametag" {
 
 variable "vpc_id" {
   type = string
-  
+
 }

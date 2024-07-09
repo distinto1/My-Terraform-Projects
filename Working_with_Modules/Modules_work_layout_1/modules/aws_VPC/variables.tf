@@ -1,5 +1,5 @@
 variable "vpc_cidr" {
-  type = string
+  type    = string
   default = "172.16.0.0/16"
 }
 
@@ -8,5 +8,5 @@ variable "vpc_tagname" {
   default = {
     "Name" = "sprint_july06"
   }
-  
+
 }
