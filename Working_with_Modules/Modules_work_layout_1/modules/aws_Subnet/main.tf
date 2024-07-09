@@ -1,13 +1,9 @@
 #--------------------AWS_Subnet Attached to the AWS VPC------------------------
-
 resource "aws_subnet" "attached_subnet_1" {
-  vpc_id = aws_vpc.sprint_july06_vpc.id
-  cidr_block = "172.16.0.0/24"
+  vpc_id = var.vpc_id
+  cidr_block = var.subnet_cidr
   availability_zone = "us-east-1a"
 
-  tags = {
-    Name = "sprint_july06"
-
-  }
-    
+  tags = var.subnet_nametag  
 }
+

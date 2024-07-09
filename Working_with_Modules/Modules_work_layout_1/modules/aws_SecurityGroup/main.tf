@@ -3,7 +3,7 @@
 resource "aws_security_group" "allow_tls" {
   name = "allow_tls"
   description = "Allow TLS inbound traffic"
-  vpc_id = aws_vpc.sprint_july06_vpc.id
+  vpc_id = var.vpc_id
 
   ingress {
     description = "TLS from VPC"
@@ -21,8 +21,6 @@ resource "aws_security_group" "allow_tls" {
     ipv6_cidr_blocks = ["::/0"]
   }
 
-  tags = {
-    Name = "allow_tls"
-  }
+  tags = var.sg_nametag
   
 }

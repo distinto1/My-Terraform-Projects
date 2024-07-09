@@ -1,11 +1,9 @@
 #-----------------------AWS NIC Attached to AWS INSTANCE--------------------------------------
-
 resource "aws_network_interface" "foo" {
-  subnet_id = aws_subnet.attached_subnet_1.id
-  private_ips = ["172.16.10.100"]
+  subnet_id = var.subnet_id
+  private_ips = var.private_ips
 
-  tags = {
-    Name = "primary_network_interface"
-  }
+  tags = var.network_interface_nametag
   
 }
+
