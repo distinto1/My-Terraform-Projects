@@ -22,24 +22,12 @@ variable "subnet_nametag" {
   }
 }
 
-variable "vpc_id" {
-  type = string 
-}
-
-variable "vpc_id" {
-    type = string
-}
-
 variable "sg_nametag" {
   type = map(any)
   default = {
     "Name" = "allow_tls"
   }
   
-}
-
-variable "subnet_id" {
-  type = string 
 }
 
 variable "private_ips" {
@@ -72,7 +60,5 @@ variable "instance_ami" {
   default = "023d39cbc16614424"
 }
 
-variable "network_interface_id" {
-  type = string 
-}
+
 

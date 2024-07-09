@@ -7,3 +7,5 @@ resource "aws_subnet" "attached_subnet_1" {
   tags = var.subnet_nametag  
 }
 
+
+
