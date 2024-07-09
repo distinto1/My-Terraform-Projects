@@ -1,5 +1,5 @@
 variable "vpc_cidr" {
-  type = string
+  type    = string
   default = "172.16.0.0/16"
 }
 
@@ -7,11 +7,11 @@ variable "vpc_tagname" {
   type = map(any)
   default = {
     "Name" = "sprint_july06"
-  } 
+  }
 }
 
 variable "subnet_cidr" {
-  type = string
+  type    = string
   default = "172.16.0.0/24"
 }
 
@@ -27,12 +27,12 @@ variable "sg_nametag" {
   default = {
     "Name" = "allow_tls"
   }
-  
+
 }
 
 variable "private_ips" {
-  type = list(string)
-  default = ["172.16.10.100"] 
+  type    = list(string)
+  default = ["172.16.10.100"]
 }
 
 variable "network_interface_nametag" {
@@ -40,25 +40,29 @@ variable "network_interface_nametag" {
   default = {
     "Name" = "primary_network_interface"
   }
-  
+
 }
 
 variable "instance_nametag" {
   type = map(any)
   default = {
-    "Name"= "PROD_SERVER"
-  } 
+    "Name" = "PROD_SERVER"
+  }
 }
 
 variable "instance_type" {
-  type = string
+  type    = string
   default = "t2.micro"
 }
 
 variable "instance_ami" {
-  type = string
-  default = "023d39cbc16614424"
+  type    = string
+  default = "ami-04a81a99f5ec58529"
 }
 
+variable "vpc_cidr_block" {
+  description = "The CIDR block of the VPC"
+  type        = string
+}
 
 
