@@ -32,7 +32,7 @@ variable "sg_nametag" {
 
 variable "private_ips" {
   type    = list(string)
-  default = ["172.16.10.100"]
+  default = ["172.16.0.100"]
 }
 
 variable "network_interface_nametag" {
@@ -63,6 +63,7 @@ variable "instance_ami" {
 variable "vpc_cidr_block" {
   description = "The CIDR block of the VPC"
   type        = string
+  default     = "172.16.0.0/16"
 }
 
 
