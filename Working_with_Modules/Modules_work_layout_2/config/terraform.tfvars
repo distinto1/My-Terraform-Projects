@@ -1,13 +1,13 @@
 aws_vpc = "172.16.0.0/16"
 
 aws_vpc_tag = {
-   "Name" = "sprint_1007"
+  "Name" = "Dev_sprint_1007"
 }
 
 subnet_cidr = "172.16.10.0/24"
 
 tag_for_subnet = {
-  "Name" = "The_Sprint1007_subnet"
+  "Name" = "Dev_Sprint1007_subnet"
 }
 
 ingress_cidr_block = "172.16.0.0/16"
@@ -19,7 +19,7 @@ sg_nametag = {
 private_ips = ["172.16.10.100"]
 
 nic_nametag = {
-   "Name" = "primary_network_interface"
+  "Name" = "Dev_network_interface"
 }
 
 ami = "ami-04a81a99f5ec58529"

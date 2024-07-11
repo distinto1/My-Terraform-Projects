@@ -35,8 +35,20 @@ module "instance" {
   network_interface_id = module.aws_nic.network_interface_id
   instance_name        = var.instance_name
 
+}
 
+module "instance_east_2" {
+  source = "./modules/aws_instance"
+  providers = {
+    aws = aws.east-2
+  }
+  ami                  = var.ami
+  instance_type        = var.instance_type
+  network_interface_id = module.aws_nic.network_interface_id
+  instance_name        = var.instance_name
 
 }
+
+
 
 
